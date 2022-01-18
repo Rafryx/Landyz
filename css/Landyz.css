@@ -1,0 +1,600 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background:#ffffff;
+    font-family: 'Roboto', sans-serif;   
+}
+
+:root{
+  --cor0: #ffffff;
+  --cor1: #0B4455;
+  --cor2: #131111;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Roboto', sans-serif;
+}
+
+
+/* Cabeçalho - Start */
+.navbar-dark { /* Primeiro Cabeçalho */
+    color: white;
+    display: none;   
+}
+
+.navbar-dark p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bi { /* Cor do Telefone e Envelope no cabeçalho */
+    color: rgb(60, 122, 214);
+}
+
+.navbar-expand-lg {
+    background-color: var(--cor3);
+    width: 100%;
+    padding-left: 2em;
+}
+
+.logoC { /* Imagem de logo Landyz */
+    margin-left: 40px;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.start::after, .buy::after, .sell::after, .contact::after, .login::after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1)
+   53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+
+  transition: all 0.2s ease-in-out;
+}
+
+.start, .buy, .sell, .contact, .login {
+  color:white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.start:hover, .buy:hover, .sell:hover, .contact:hover, .login:hover {
+  transform: scale(1.2);
+
+  text-decoration: none;
+  color: silver;
+}
+
+/* Cabeçalho - End */
+
+/*Menu Responsivo */ 
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+   
+  #navbar-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: var(--cor1);
+    height: 8em;
+  }
+  
+  main {
+    background: url() no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  }
+  
+  .nav-list { /* botões no cabeçalho */
+    list-style: none; /* remove o formato de lista */
+    display: flex; /* para deixar lado a lado */
+    margin: 0;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: all 0.2s ease-in-out;
+}
+  
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+  
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+  
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 20vw;
+    height: 60vh;
+    background: var(--cor1);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    border-bottom-left-radius: 15px;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+    margin-right: 4em;
+  }
+}
+  
+.nav-list.active {
+  transform: translateX(0);
+}
+  
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+
+/* Losangulos da página inicial - Start */
+.losango, .losango1, .losango2, .losango3, .losango4 {
+    width: 100px;
+    height: 100px;
+    background: #131111;   
+    transform: rotate(-45deg);
+}
+
+.losango {
+    align-items: center;
+    justify-content: center;
+    margin-top: 220px;
+    margin-left: 20px;
+}
+
+.losango1 {
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    margin-left: 175px;
+}
+
+.losango2 {
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    margin-left: 330px;
+}
+
+.losango3 {
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    margin-left: 97px;
+}
+
+.losango4 {
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    margin-left: 253px;
+}
+/* Losangulos da página inicial - End */
+
+
+/* Posição do Losangulo e a Barra de Pesquisa */
+#inicioL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS reset - Inicio página Login*/
+*, *:before, *:after { 
+    margin:0;
+    padding:0;
+    font-family: Arial,sans-serif;
+  }
+   
+  /* remove a linha dos links */
+  a{
+    text-decoration: none;
+  }
+   
+  /* esconde as ancoras da tela */
+  a.links{
+    display: none;
+  }
+
+  /* centralizar a caixa de Login - Start */
+#loginL {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/* Centralizar a caixa de Login - End */
+
+  .content {
+    width: 500px;
+    min-height: 560px;    
+    margin: 0px auto;
+    position: relative;
+  }
+
+
+  h1 { /* Texto cadastro */
+    font-size: 48px;
+    color: var(--cor1);
+    padding: 2px 0 10px 0;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  h1:after { /* Linha abaixo de Texto cadastro */
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+    background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+  }
+  .content p {
+      margin-bottom: 15px;
+  }
+  .content p:first-child{
+    margin: 0px;
+  }
+   
+  label {
+    color: #405c60;
+    position: relative;
+  }
+  /* placeholder */
+::-webkit-input-placeholder  {
+    color: #bebcbc; 
+    font-style: italic;
+  }
+   
+  input:-moz-placeholder,
+  textarea:-moz-placeholder{
+    color: #bebcbc;
+    font-style: italic;
+  }
+
+  input {
+    outline: none;
+  }
+   
+  /*estilo dos input,  menos o checkbox */
+  input:not([type="checkbox"]){
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;    
+    border: 1px solid #b2b2b2;
+   
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+   
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+   
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+   
+/*estilo do botão submit */
+  input[type="submit"]{
+    width: 70%!important;
+    cursor: pointer;  
+    background: rgb(61, 157, 179);
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;  
+    border: 1px solid #fff;   
+    margin-bottom: 10px;
+    margin-left: 45px;
+    text-shadow: 0 1px 1px #333;
+   
+    -webkit-border-radius: 5px;
+    border-radius: 250px;
+   
+    transition: all 0.2s linear;
+  }
+   
+  /*estilo do botão submit no hover */
+  input[type="submit"]:hover {
+    background: #4ab3c6;
+  }
+/*
+  link {
+    position: absolute;
+    background: #e1eaeb;
+    color: #7f7c7c;
+    left: 0px;
+    height: 20px;
+    width: 440px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px;
+    text-align: right;
+    border-top: 1px solid #dbe5e8;
+   
+    -webkit-border-radius: 0 0  5px 5px;
+    border-radius: 0 0  5px 5px;
+  }
+
+ 
+  .link a {
+    font-weight: bold;
+    background: #f7f8f1;
+    padding: 6px;
+    color: rgb(29, 162, 193);
+    margin-left: 10px;
+    border: 1px solid #cbd518;
+   
+    -webkit-border-radius: 4px;
+    border-radius: 4px;  
+   
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s  linear;
+  }
+   
+  .link a:hover {
+    color: #39bfd7;
+    background: #f7f7f7;
+    border: 1px solid #4ab3c6;
+  }
+*/
+
+/* Cadastro e Login */
+  #cadastro, 
+  #login {
+    position: absolute;
+    top: 0px;
+    width: 88%; 
+    padding: 18px 6% 60px 6%;
+    margin: 0 0 35px 0;
+    background: #f7f7f7;
+    border: 1px solid rgba(147, 184, 189,0.8);
+    
+    -webkit-box-shadow: 5px;
+    border-radius: 5px;
+     
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+   
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+  }
+
+/* Efeito ao clicar no botão ( Ir para Login ) */
+#paracadastro:target ~ .content #cadastro,
+#paralogin:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+/* Efeito ao clicar no botão ( Cadastre-se ) */
+#registro:target ~ .content #login,
+#paralogin:target ~ .content #cadastro{
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+  }
+   
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+   
+  /*fadeOutLeft*/
+  @-webkit-keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateX(-20px);
+    }
+  }
+   
+  @keyframes fadeOutLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+ .content {
+    display: inline-block;      
+ }
+  /*----------Fim do Login--------------*/
+
+/*----Barra de pesquisa estados-*/
+#inicioL label{
+  color:black; 
+}
+
+#inicioL ul li {
+  list-style: none;  
+}
+
+/*----Barra de pesquisa cidades-*/
+#cidade{
+    width: 171px;
+}
+
+/*---Barra de pesquisa tipo-*/
+#tipo{
+  width: 191px;
+}
+
+/*------rodape-------*/
+/* Grid */
+.grid {
+	display: grid;
+}
+.sidenav {
+	grid-area: sidenav;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+.grid-template-areas-1 {
+	grid-template-areas:
+		"sidenav footer footer"
+		;
+}
+
+.grid-template-areas-2 {
+	grid-template-areas:
+		"sidenav content footer"
+		;
+}
+
+.grid-template-areas-3 {
+	grid-template-areas:
+		"footer footer"
+		;
+}
+
+.grid-template-areas-4 {
+	grid-template-columns: 0% 0% 0%;
+	grid-template-rows: 0px 0px 0px;
+	grid-template-areas:
+		"sidenav content advert"
+		"sidenav footer footer"
+		;
+}
+
+.grid-template-areas-5 {
+	grid-template-areas:
+		"content nav"
+		". content advert"
+		"sidenav footer ."
+		;
+}
+
+/* Grid Item */
+.item {
+    background:white;
+   
+}
+.item ul{
+    list-style: none;
+    margin-top: 0px;
+    line-height: 30px;
+    text-align: center;
+    float:center;   
+}
+
+.item ul li strong {
+    color:black;
+}
+
+.item1{
+	background: var(--cor1);
+	text-align: center;
+	color:white;
+  margin-top: 100px;    
+}
+.item1 img {
+    margin-top: 50px;
+}
+
+.grid {
+  max-width: 50%;
+	max-width: 100%;
+	margin: 0 auto;
+}

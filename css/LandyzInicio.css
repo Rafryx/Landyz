@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("../Imagem/fundolote-10.png") center;
+    background-repeat: no-repeat;
+    background-size: calc(270px + 2000px);
+    background-attachment: relative;
+    font-family: 'Roboto', sans-serif;   
+}
+
+:root{
+        --cor0: #ffffff;
+        --cor1: #0B4455;
+        --cor2: #131111;
+
+        --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+        --fonte-destaque: 'Roboto', sans-serif;
+      }  
+
+/* Cabeçalho - Start */
+
+.navbar-dark p {
+    font-family: 'Roboto', sans-serif;
+}
+  
+.bi { /* Cor do Telefone e Envelope no cabeçalho */
+    color: rgb(60, 122, 214);
+}
+
+.navbar-expand-lg {
+    background-color: var(--cor3);
+    width: 100%;
+    padding-left: 2em;
+}
+
+.logoC { /* Imagem de logo Landyz */
+    margin-left: 30px;
+}
+
+.start::after, .buy::after, .sell::after, .contact::after, .login::after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 12px;
+    background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1)
+     53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%);
+  
+    transition: all 0.2s ease-in-out;
+}
+  
+.start, .buy, .sell, .contact, .login {
+    color:white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+  
+    transition: all 0.2s ease-in-out;
+}
+  
+.start:hover, .buy:hover, .sell:hover, .contact:hover, .login:hover {
+    transform: scale(1.2);
+  
+    text-decoration: none;
+    color: silver;
+}
+
+.nav-list { /* botões no cabeçalho */
+    list-style: none; /* remove o formato de lista */
+    display: flex; /* para deixar lado a lado */
+    margin: 0;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#navbar-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: var(--cor1);
+    height: 4em;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+/* Cabeçalho - End */
+
+
+/*Menu Responsivo */ 
+a {
+    color: var(--cor0);
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+a:hover {
+    opacity: 0.7;
+}
+  
+main {
+    background: url() no-repeat center;
+    background-size: cover;
+    height: 78vh;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+  
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--cor0);
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+        position: fixed;
+        top: 8vh;
+        right: 0px;     
+        width: 20vw;
+        height: 60vh;
+        background: var(--cor1);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        border-bottom-left-radius: 15px;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+      margin-right: 4em;
+    }
+}
+
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .mobile-menu.active .line1 {
+      transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    
+    .mobile-menu.active .line2 {
+      opacity: 0;
+    }
+    
+    .mobile-menu.active .line3 {
+      transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+
+    /* Losangulos da página inicial - Start */
+
+.container-losango {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.txt-losango {
+    width: 100px;
+    height: 100px;
+}
+
+.losango, .losango1, .losango2, .losango3, .losango4 {
+    width: 100px;
+    height: 100px;
+    background: #131111;   
+    transform: rotate(-45deg);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 10px;   
+}
+
+.losango:hover, .losango1:hover, .losango2:hover, .losango3:hover, .losango4:hover {
+    transform: scale(.3s);
+    box-shadow: 1px 1px 1px #616161;
+    cursor: pointer;
+}
+
+.losango {
+    margin-top: 100px;
+    margin-right: 300px;
+}
+
+.losango h6 {
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 38%;
+    left: -4%;
+    margin-right: -50%;    
+    transform: rotate(45deg);     
+}
+
+.losango a {
+    text-decoration: none;
+    color:white;   
+}
+
+.losango1 {
+    margin-top: -101px;
+}
+
+.losango1 a {
+    text-decoration: none;
+    color:white; 
+}
+
+.first, h6 {
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 17%;
+    left: 51%;
+    margin-right: -50%;    
+    transform: rotate(45deg);
+}
+
+.second, h6 {
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 13%;
+    margin-right: -50%;    
+    transform: rotate(45deg);
+}
+
+.third, h6 {
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 53%;
+    left: -2%;
+    margin-right: -50%;    
+    transform: rotate(45deg);
+}
+
+.losango2 {
+    margin-top: -100px;
+    margin-left: 300px;
+}
+
+.losango2 h6 {
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 38%;
+    left: 31%;
+    margin-right: -50%;    
+    transform: rotate(45deg);  
+}
+
+.losango2 a {
+    text-decoration: none;
+    color:white; 
+}
+
+.losango3 {
+    margin-top: -20px;
+    margin-right: 150px;
+}
+
+.losango3 h6 {
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 37%;
+    left: 11%;
+    margin-right: -50%;    
+    transform: rotate(45deg);    
+}
+
+.losango3 a {
+    text-decoration: none;
+    color:white; 
+}
+
+.losango4 {
+    margin-top: -100px;
+    margin-left: 150px;
+}
+
+.losango4 h6 {
+    color: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 38%;
+    left: 15%;
+    margin-right: -50%;    
+    transform: rotate(45deg);    
+}
+
+.losango4 a {
+    text-decoration: none;
+    color:white; 
+}
+/* Losangulos da página inicial - End */
+
+strong {
+    color: #ffffff;
+}
+
+#pesquisar { /* Botão pesquisar */
+    padding: 10px;   
+    border: 1px solid #b2b2b2;  
+    text-shadow: 0 1px 1px #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgb(61, 157, 179);
+    margin-left: -20.5em;
+    top: 19em;
+    position: absolute;
+   
+    -webkit-border-radius: 3px;
+    border-radius: 5px;
+   
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+   
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+#pesquisar:hover {
+    background: #4ab3c6;
+}
+
+/*----Barra de pesquisa estados-*/
+#inicioL label {
+    color:black;   
+}
+  
+#inicioL ul li {
+    list-style: none;  
+}
+
+/* Barra de pesquisa estado */
+#txt-estado {
+    width: 230px;
+}
+  
+  /*----Barra de pesquisa cidades-*/
+#txt-cidade {
+    width: 230px;
+    margin-left: 10px;
+}
+  
+/*---Barra de pesquisa tipo-*/
+#txt-tipo {
+    width: 230px;
+    margin-left: 10px;
+}
+
+.container-fluid { /* Conteiner das barras de pesquisa */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    margin-top: 3em;
+    height: 28vh;
+}
+
+#group-pesquisa {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Inicio dos botões laterais*/
+.btn-esquerdo {
+    float: left;
+    margin-left: 100px;
+    text-align: center;
+    min-width: 200px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    background: #0B4455;
+    background: linear-gradient(90deg, rgb(61, 157, 179) 0%, rgb(61, 157, 179) 100%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 12px 12px 24px rgb(61, 157, 179);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+button::before {
+    content: '';
+    border-radius: 10px;
+    min-width: calc(200px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #0B4455;
+    box-shadow: 0 0 60px rgb(61, 157, 179);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+button:hover::before, button:focus::before {
+    opacity: 1;
+}
+
+button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #0B4455;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 230px;
+        height: 230px;
+        opacity: 0;
+    }
+}
+        /*------ botão direito ------*/
+.btn-direito {
+    float: right;
+    margin-right: 100px;
+    color: white;
+    text-align: center;
+    min-width: 200px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;   
+}
+
+button::before {
+    content: '';
+    border-radius: 10px;
+    min-width: calc(200px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+    
+}
+
+button:hover::before, button:focus::before {
+    opacity: 1;
+}
+
+button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+   
+}
+
+button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 230px;
+        height: 230px;
+        opacity: 0;
+    }
+}
+
+/*sumir botoes do menu */
+@media screen and (min-width: 800px) and (max-width: 3000px){
+   .buy {
+       display: none;
+   }
+   .sell {
+       display:none;
+   }
+}
+
+/*---botoes responsivo lateral */
+@media(max-width: 800px) {
+    .btn-direito {
+        display: none;
+    }
+    .btn-esquerdo {
+        display: none;
+    }
+}
+/*Fim dos botões laterais*/
+
